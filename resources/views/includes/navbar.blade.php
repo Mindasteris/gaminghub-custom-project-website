@@ -12,12 +12,12 @@
                 {{-- Navigation Links Desktop --}}
                 <div>
                     <ul class="hidden md:flex gap-8 font-Montserrat_Bold text-sm md:text-md lg:text-xl">
-                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="/">HOME</a></li>
-                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="{{ route('gaming') }}">GAMING</a></li>
-                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="{{ route('services') }}">SERVICES</a></li>
-                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="{{ route('community.index') }}">COMMUNITY</a></li>
-                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="{{ route('about') }}">ABOUT</a></li>
-                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="{{ route('contact.index') }}">CONTACTS</a></li>
+                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="/">HOME</a></li>
+                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="{{ route('gaming') }}">GAMING</a></li>
+                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="{{ route('services') }}">SERVICES</a></li>
+                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="{{ route('community.index') }}">COMMUNITY</a></li>
+                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="{{ route('about') }}">ABOUT</a></li>
+                        <li class="group border-b-4 border-transparent hover:border-black py-6"><a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="{{ route('contact.index') }}">CONTACTS</a></li>
                     </ul>
                 </div>
                 
@@ -27,13 +27,13 @@
                     @guest
                         @if (Route::has('login'))
                             <li class="group border-b-4 border-transparent hover:border-black py-6">
-                                <a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="{{ route('login') }}">{{ __('Login') }}</a>
+                                <a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
                             </li>
                         @endif
 
                         @if (Route::has('register'))
                             <li class="group border-b-4 border-transparent hover:border-black py-6">
-                                <a class="group-hover:bg-black rounded-lg group-hover:text-white p-2" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                <a class="group-hover:bg-black rounded-lg group-hover:text-white p-2 nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
                             </li>
                         @endif
                         @else
@@ -72,12 +72,12 @@
             <!-- Mobile Navigation Links -->
 			<div class="hidden mobile-menu mobile-close font-Montserrat_Bold border-t-2 border-black text-lg">
 				<ul class="space-y-6 p-4">
-					<li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2" href="/"><i class="fa-solid fa-house"></i> HOME</a></li>
-                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2" href="{{ route('gaming') }}"><i class="fa-solid fa-gamepad"></i> GAMING</a></li>
-                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2" href="{{ route('services') }}"><i class="fa-solid fa-bell-concierge"></i> SERVICES</a></li>
-                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2" href="{{ route('community.index') }}"><i class="fa-sharp fa-solid fa-comments"></i> COMMUNITY</a></li>
-                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2" href="{{ route('about') }}"><i class="fa-sharp fa-solid fa-shield"></i> ABOUT</a></li>
-                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2" href="{{ route('contact.index') }}"><i class="fa-solid fa-address-card"></i> CONTACTS</a></li>
+					<li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="/"><i class="fa-solid fa-house"></i> HOME</a></li>
+                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="{{ route('gaming') }}"><i class="fa-solid fa-gamepad"></i> GAMING</a></li>
+                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="{{ route('services') }}"><i class="fa-solid fa-bell-concierge"></i> SERVICES</a></li>
+                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="{{ route('community.index') }}"><i class="fa-sharp fa-solid fa-comments"></i> COMMUNITY</a></li>
+                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="{{ route('about') }}"><i class="fa-sharp fa-solid fa-shield"></i> ABOUT</a></li>
+                    <li class=""><a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="{{ route('contact.index') }}"><i class="fa-solid fa-address-card"></i> CONTACTS</a></li>
                     
                     {{-- Register Mobile Links --}}
                     <div class="text-lg">
@@ -85,13 +85,13 @@
                             @guest
                                 @if (Route::has('login'))
                                     <li class="">
-                                        <a class="hover:bg-black rounded-lg hover:text-white p-2" href="{{ route('login') }}"><i class="fa-solid fa-right-to-bracket"></i> {{ __('Login') }}</a>
+                                        <a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="{{ route('login') }}"><i class="fa-solid fa-right-to-bracket"></i> {{ __('Login') }}</a>
                                     </li>
                                 @endif
 
                                 @if (Route::has('register'))
                                     <li class="">
-                                        <a class="hover:bg-black rounded-lg hover:text-white p-2" href="{{ route('register') }}"><i class="fa-solid fa-user-plus"></i> {{ __('Register') }}</a>
+                                        <a class="hover:bg-black rounded-lg hover:text-white p-2 nav-link" href="{{ route('register') }}"><i class="fa-solid fa-user-plus"></i> {{ __('Register') }}</a>
                                     </li>
                                 @endif
                                 @else
@@ -120,6 +120,7 @@
 
              {{-- Script --}}
 		    <script>
+                // Mobile Menu
 				const btn = document.querySelector("button.mobile-menu-button");
 				const menu = document.querySelector(".mobile-menu");
                 const btnCloseMenu = document.querySelector("button.mobile-menu-close");
@@ -151,5 +152,15 @@
                     closeIcon = document.getElementById("close");
                     closeIcon.style.display = 'none';
                 }
+
+                // Active Nav Link on Click
+                const currentLocation = location.href;
+                const menuItem = document.querySelectorAll('.nav-link');
+                const menuLength = menuItem.length;
+                for(var i = 0; i < menuLength; i++) {
+                    if(menuItem[i].href === currentLocation) {
+                        menuItem[i].className = 'active';
+                    };
+                };
 		    </script>  
 </nav>

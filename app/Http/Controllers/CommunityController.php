@@ -63,7 +63,9 @@ class CommunityController extends Controller
      */
     public function show($id)
     {
-        //
+        $comment = Community::findOrFail($id);
+
+        return view('community.show', compact('comment'));
     }
 
     /**

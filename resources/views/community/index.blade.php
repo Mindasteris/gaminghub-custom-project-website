@@ -48,10 +48,10 @@
             {{-- Show Comments --}}
             @foreach ($comments as $comment)
                 <div class="shadow-2xl my-10 p-10">
-                    <h2 class="font-Montserrat_Bold">{{ $comment->name }}</h2>
+                    <h2 class="font-Montserrat_Bold"><a class="hover:underline" href="{{ route('community.show', $comment->id) }}">{{ $comment->name }}</a></h2>
                     <span class="text-sm text-gray-500 italic">{{ $comment->updated_at }}</span>
                     <h4 class="font-Montserrat_Medium pt-5">{{ $comment->title }}</h4>
-                    <h3 class="font-Montserrat_Regular py-5 border-b">{{ $comment->comment }}</h3>
+                    <h3 class="font-Montserrat_Regular text-xl py-5 border-b">{{ $comment->comment }}</h3>
                     <div class="flex items-center gap-8 pt-4">
                         {{-- Update Link --}}
                         <a class="hover:bg-black hover:text-white p-2 rounded-lg font-Montserrat_Bold" href="{{ route('community.edit', $comment->id) }}"><i class="fa-solid fa-pen-to-square"></i> Edit</a>

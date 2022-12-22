@@ -6,8 +6,6 @@
     <div class="max-w-[1240px] mx-auto">
         <h1 class="text-5xl md:text-6xl font-Montserrat_Bold">Community</h1>
 
-        <h1>Tell us what you think!</h1>
-
         {{-- Success Message Create --}}
         @if (Session::has('success'))
             <div class="bg-green-500 text-white text-center py-4 mx-4 md:mx-0 mb-10 rounded-lg">
@@ -37,13 +35,26 @@
             </div>
         </div>
 
-        {{-- No Comments --}}
+        {{-- If No Comments --}}
         <div>
             @if ($comments->count() == 0)
                 <h1>No Comments!</h1>
                 @else
                 <h1>Comments</h1>
             @endif
+
+            {{-- Search Form --}}
+            <form action="{{ route('search') }}" method="GET">
+                @csrf
+                <div class="pb-10 text-center">
+                    <label for="search" class="font-Montserrat_Regular text-xl"><i class="fa-solid fa-magnifying-glass"></i> {{ __('Search') }}</label>
+
+                    <div class="px-4 md:px-0 py-2">
+                        <input type="text" name="search" placeholder="Search" class="py-2 px-2 w-full md:w-1/2 lg:w-1/3 rounded-lg @error('name') is-invalid border-red-600 outline-none @enderror">
+                    </div>
+                    <button type="submit" class="bg-indigo-700 w-1/2 md:w-1/5 py-4 ml-4 md:ml-0 text-white font-Montserrat_Bold rounded-lg hover:bg-indigo-600">Search</button>
+                </div>
+            </form>
 
             {{-- Show Comments --}}
             @foreach ($comments as $comment)

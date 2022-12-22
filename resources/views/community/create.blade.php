@@ -14,7 +14,7 @@
                     <label for="name" class="font-Montserrat_Regular text-xl"><i class="fa-solid fa-user"></i></i> {{ __('Name') }}</label>
 
                     <div class="px-4 md:px-0 py-2">
-                        <input id="name" type="text" class="py-2 w-full md:w-1/2 lg:w-1/3 rounded-lg @error('name') is-invalid border-red-600 outline-none @enderror" name="name" autofocus>
+                        <input id="name" type="text" class="py-2 px-2 w-full md:w-1/2 lg:w-1/3 rounded-lg @error('name') is-invalid border-red-600 outline-none @enderror" name="name" autofocus>
 
                        <div>
                             @error('name')
@@ -30,7 +30,7 @@
                     <label for="title" class="font-Montserrat_Regular text-xl"><i class="fa-solid fa-pen"></i> {{ __('Title') }}</label>
 
                     <div class="px-4 md:px-0 py-2">
-                        <input id="title" type="text" class="py-2 w-full md:w-1/2 lg:w-1/3 rounded-lg @error('title') is-invalid border-red-600 outline-none @enderror" name="title">
+                        <input id="title" type="text" class="py-2 px-2 w-full md:w-1/2 lg:w-1/3 rounded-lg @error('title') is-invalid border-red-600 outline-none @enderror" name="title">
 
                         <div>
                             @error('title')
@@ -46,7 +46,7 @@
                     <label for="comment" class="font-Montserrat_Regular text-xl"><i class="fa-solid fa-message"></i> {{ __('Comment') }}</label>
 
                     <div class="px-4 md:px-0 py-2">
-                        <textarea name="comment" id="comment" rows="10" class="py-2 w-full md:w-1/2 lg:w-1/3 rounded-lg @error('comment') is-invalid border-red-600 outline-none @enderror"></textarea>
+                        <textarea name="comment" id="comment" rows="10" class="py-2 px-2 w-full md:w-1/2 lg:w-1/3 rounded-lg @error('comment') is-invalid border-red-600 outline-none @enderror"></textarea>
                         
                         <div>
                             @error('comment')

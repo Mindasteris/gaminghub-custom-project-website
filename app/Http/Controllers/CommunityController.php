@@ -2,10 +2,11 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Community;
-use Illuminate\Console\Command;
-use Illuminate\Http\Request;
 use PhpParser\Comment;
+use App\Models\Community;
+use Illuminate\Http\Request;
+use Illuminate\Console\Command;
+use Illuminate\Support\Facades\DB;
 
 class CommunityController extends Controller
 {
@@ -17,7 +18,8 @@ class CommunityController extends Controller
     public function index()
     {
         // $comments = Community::all();
-        $comments = Community::paginate(5);
+        // $comments = Community::orderBy('updated_at', 'desc')->get();
+        $comments = Community::orderBy('updated_at', 'desc')->paginate(5);
 
         return view('community.index', compact('comments'));
     }

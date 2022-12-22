@@ -119,4 +119,19 @@ class CommunityController extends Controller
 
         return redirect(route('community.index'))->with('success_delete', 'Your comment was deleted.');
     }
+
+    public function search(Request $request)
+    {
+        $comments = Community::where([
+            ['name', '!=', null],
+            [function ($query) use ($request) {
+                if (($result = $request->search)) {
+                    $query->orWhere('name', 'LIKE', '%' . $result . '%')->get();
+                }
+            }]
+        ]) ->orderBy('id', 'desc')
+        ->paginate(5);
+
+        return view('community.index', compact('comments'))->with('i', (request()->input('page', 1) - 1) * 5);
+    }
 }

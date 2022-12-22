@@ -11,6 +11,10 @@ Get Composer: https://getcomposer.org/
 
 3. Database file is in '_database_file' folder.
 
+4. If Error "No Application Encryption Key Has Been Specified" in project directory run command: "php artisan key:generate".
+
+5. There might be errors from "Vite", in terminal run command: "npm install && npm run dev".
+
 
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
 

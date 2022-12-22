@@ -19,6 +19,9 @@ Route::view('/services', 'services')->name('services');
 // Community
 Route::resource('/community', CommunityController::class, ['names' => 'community']);
 
+// Community Search
+Route::get('/search', [CommunityController::class, 'search'])->name('search');
+
 // About
 Route::view('/about', 'about')->name('about');
 
